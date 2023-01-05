@@ -1,0 +1,12 @@
+div{
+    position: relative;
+    width: calc(50vw - 2px);
+    height: calc(50vh - 2px);
+    border: 1px solid black;
+    text-align: center;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
