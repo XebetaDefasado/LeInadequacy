@@ -33,6 +33,11 @@ wordChanger.addEventListener('click', () => {
         }
     }
 
+    let wordArrayed = undefined
+    let wordTexted = undefined
+    let Info = undefined;
+    let Probability = undefined
+
     const AdvConj = [
         "mas",
         "porém",
@@ -48,10 +53,9 @@ wordChanger.addEventListener('click', () => {
     ];
 
     while(pageText.textContent.includes(AdvConj[0])){
-        let wordArrayed = argDepList("m", "a", "s");
-        let wordTexted = wordArrayed.join("");
-        let Info = undefined;
-        let Probability = pickRandom(2)
+        wordArrayed = argDepList("m", "a", "s");
+        wordTexted = wordArrayed.join("");
+        Probability = pickRandom(2)
         if(Probability === 0){
             Info = pickRandom(UpperAdvConj);
             pageText.textContent = pageText.textContent.replace(wordTexted, Info)
@@ -61,4 +65,34 @@ wordChanger.addEventListener('click', () => {
             pageText.textContent = pageText.textContent.replace(wordTexted, Info)
         }
     }
+    setTimeout( () => {
+        while(pageText.textContent.includes(UpperAdvConj[0])){
+            wordArrayed = argDepList("M", "A", "S")
+            wordTexted = wordArrayed.join("");
+            Info = wordTexted.toLowerCase()
+            pageText.textContent = pageText.textContent.replace(wordTexted, Info)
+            console.log(1)
+        }
+        while(pageText.textContent.includes(UpperAdvConj[1])){
+            wordArrayed = argDepList("P", "O", "R", "É", "M")
+            wordTexted = wordArrayed.join("");
+            Info = wordTexted.toLowerCase()
+            pageText.textContent = pageText.textContent.replace(wordTexted, Info)
+            console.log(2)
+        }
+        while(pageText.textContent.includes(UpperAdvConj[2])){
+            wordArrayed = argDepList("E", "N", "T", "R", "E", "T", "A", "N", "T", "O")
+            wordTexted = wordArrayed.join("");
+            Info = wordTexted.toLowerCase()
+            pageText.textContent = pageText.textContent.replace(wordTexted, Info)
+            console.log(3)
+        }
+        while(pageText.textContent.includes(UpperAdvConj[3])){
+            wordArrayed = argDepList("T", "O", "D", "A", "V", "I", "A")
+            wordTexted = wordArrayed.join("");
+            Info = wordTexted.toLowerCase()
+            pageText.textContent = pageText.textContent.replace(wordTexted, Info)
+            console.log(4)
+        }
+    }, 2000)
 })
