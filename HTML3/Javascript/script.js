@@ -65,7 +65,46 @@ wordChanger.addEventListener('click', () => {
             pageText.textContent = pageText.textContent.replace(wordTexted, Info)
         }
     }
-    setTimeout( () => {
+    while(pageText.textContent.includes(AdvConj[1])){
+        wordArrayed = argDepList("p", "o", "r", "é", "m");
+        wordTexted = wordArrayed.join("");
+        Probability = pickRandom(2)
+        if(Probability === 0){
+            Info = pickRandom(UpperAdvConj);
+            pageText.textContent = pageText.textContent.replace(wordTexted, Info)
+        }
+        if(Probability === 1){
+            Info = pickRandom(AdvConj);
+            pageText.textContent = pageText.textContent.replace(wordTexted, Info)
+        }
+    }
+    while(pageText.textContent.includes(AdvConj[2])){
+        wordArrayed = argDepList("e", "n", "t", "r", "e", "t", "a", "n", "t", "o", ",");
+        wordTexted = wordArrayed.join("");
+        Probability = pickRandom(2)
+        if(Probability === 0){
+            Info = pickRandom(UpperAdvConj);
+            pageText.textContent = pageText.textContent.replace(wordTexted, Info)
+        }
+        if(Probability === 1){
+            Info = pickRandom(AdvConj);
+            pageText.textContent = pageText.textContent.replace(wordTexted, Info)
+        }
+    }
+    while(pageText.textContent.includes(AdvConj[3])){
+        wordArrayed = argDepList("t", "o", "d", "a", "v", "i", "a", ",");
+        wordTexted = wordArrayed.join("");
+        Probability = pickRandom(2)
+        if(Probability === 0){
+            Info = pickRandom(UpperAdvConj);
+            pageText.textContent = pageText.textContent.replace(wordTexted, Info)
+        }
+        if(Probability === 1){
+            Info = pickRandom(AdvConj);
+            pageText.textContent = pageText.textContent.replace(wordTexted, Info)
+        }
+    }
+    setTimeout( () => { //Basically format part//
         while(pageText.textContent.includes(UpperAdvConj[0])){
             wordArrayed = argDepList("M", "A", "S")
             wordTexted = wordArrayed.join("");
