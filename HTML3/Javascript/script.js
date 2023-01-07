@@ -1,16 +1,9 @@
 const pageText = document.getElementById('pageText');
 const wordChanger = document.getElementById('wordChanger')
 
+
+//Lowercase transmutation -start//
 wordChanger.addEventListener('click', () => {
-    function list(n1, n2){
-        let cont = 0;
-        let storage = [];
-        for(let i = n1; i <= n2; i++){
-            storage[cont] = i;
-            cont++
-        }
-        return storage
-    }
 
     function argDepList(){
         let cont = 0;
@@ -110,28 +103,96 @@ wordChanger.addEventListener('click', () => {
             wordTexted = wordArrayed.join("");
             Info = wordTexted.toLowerCase()
             pageText.textContent = pageText.textContent.replace(wordTexted, Info)
-            console.log(1)
         }
         while(pageText.textContent.includes(UpperAdvConj[1])){
             wordArrayed = argDepList("P", "O", "R", "É", "M")
             wordTexted = wordArrayed.join("");
             Info = wordTexted.toLowerCase()
             pageText.textContent = pageText.textContent.replace(wordTexted, Info)
-            console.log(2)
         }
         while(pageText.textContent.includes(UpperAdvConj[2])){
             wordArrayed = argDepList("E", "N", "T", "R", "E", "T", "A", "N", "T", "O")
             wordTexted = wordArrayed.join("");
             Info = wordTexted.toLowerCase()
             pageText.textContent = pageText.textContent.replace(wordTexted, Info)
-            console.log(3)
         }
         while(pageText.textContent.includes(UpperAdvConj[3])){
             wordArrayed = argDepList("T", "O", "D", "A", "V", "I", "A")
             wordTexted = wordArrayed.join("");
             Info = wordTexted.toLowerCase()
             pageText.textContent = pageText.textContent.replace(wordTexted, Info)
-            console.log(4)
         }
-    }, 2000)
+    }, 0)
+})
+//Lowercase transmutation -end//
+wordChanger.addEventListener('click', () => {
+    function pickRandom(arg){
+        if(Array.isArray(arg)){
+            let i = Math.floor(Math.random() * arg.length)
+            return arg[i]
+        }
+        if(typeof arg === "number"){
+            let i = Math.floor(Math.random() * Math.floor(arg))
+            return i
+        }
+    }
+
+    let word = undefined
+    let Info = undefined;
+
+    const capitularAdvConj = [
+        "Mas",
+        "Porém",
+        "Entretanto",
+        "Todavia"
+    ]
+    const capitularUpperAdvConj = [
+        "MAs",
+        "POrém",
+        "ENtretanto",
+        "TOdavia"
+    ]
+
+    while(pageText.textContent.includes(capitularAdvConj[0])){
+        word = "Mas"
+        Info = pickRandom(capitularUpperAdvConj)
+        pageText.textContent = pageText.textContent.replace(word, Info)
+    }
+    while(pageText.textContent.includes(capitularAdvConj[1])){
+        word = "Porém"
+        Info = pickRandom(capitularUpperAdvConj)
+        pageText.textContent = pageText.textContent.replace(word, Info)
+    }
+    while(pageText.textContent.includes(capitularAdvConj[2])){
+        word = "Entretanto"
+        Info = pickRandom(capitularUpperAdvConj)
+        pageText.textContent = pageText.textContent.replace(word, Info)
+    }
+    while(pageText.textContent.includes(capitularAdvConj[3])){
+        word = "Todavia"
+        Info = pickRandom(capitularUpperAdvConj)
+        pageText.textContent = pageText.textContent.replace(word, Info)
+    }
+    setTimeout(()=>{
+        while(pageText.textContent.includes(capitularUpperAdvConj[0])){
+            word = "MAs"
+            Info = capitularAdvConj[0]
+            pageText.textContent = pageText.textContent.replace(word, Info)
+        }
+        while(pageText.textContent.includes(capitularUpperAdvConj[1])){
+            word = "POrém"
+            Info = capitularAdvConj[1]
+            pageText.textContent = pageText.textContent.replace(word, Info)
+        }
+        while(pageText.textContent.includes(capitularUpperAdvConj[2])){
+            word = "ENtretanto"
+            Info = capitularAdvConj[2]
+            pageText.textContent = pageText.textContent.replace(word, Info)
+        }
+        while(pageText.textContent.includes(capitularUpperAdvConj[3])){
+            word = "TOdavia"
+            Info = capitularAdvConj[3]
+            pageText.textContent = pageText.textContent.replace(word, Info)
+        }
+    }, 0)
 })
