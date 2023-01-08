@@ -5,9 +5,33 @@
     <link rel="stylesheet" href="CascadingStyleSheets/style.css" />
   </head>
   <body>
-    <div id="pageText" contenteditable="true"></div>
-    <button id="wordChanger"></button>
-
+    <div id="menu" style="width: 1vw">
+      <ul id="impButtons">
+        <li id="homePage">
+          <img src="CascadingStyleSheets/Images/home.png" id="homeIcon" />
+        </li>
+        <li id="searchPage">
+          <img src="CascadingStyleSheets/Images/pesquisa.png" id="searchIcon" />
+        </li>
+        <li id="textHistoryPage">
+          <img src="CascadingStyleSheets/Images/book.png" id="textIcon" />
+        </li>
+      </ul>
+    </div>
+    <div id="menuOpener">
+      <span id="buttonText">Open</span>
+    </div>
+    <div id="page">
+      <div id="pageText" contenteditable="true"></div>
+      <div id="buttons">
+        <button id="wordChanger">
+          <div id="wcText">Word Change</div>
+        </button>
+        <button id="resetButton">
+          <div id="rtText">Reset & Save</div>
+        </button>
+      </div>
+    </div>
     <script src="Javascript/script.js"></script>
   </body>
 </html>
