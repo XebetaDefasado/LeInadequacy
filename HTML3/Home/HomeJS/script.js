@@ -289,6 +289,6 @@ menuOpener.addEventListener('click', ()=> {
 
 //Reset btn -start//
 resetButton.addEventListener('click', () => {
-    //Save for textHistory//
+    
 })
 

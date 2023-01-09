@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    transition: 1s
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#menu{
+    position: absolute;
+    border: 1px solid black;
+    width: 1vw;
+    height: calc(100vh - 2px);
+    border-top-right-radius: calc(1vw / 1);
+    border-bottom-right-radius: calc(1vw / 1);
+}
+#impButtons{
+    height: 100%;
+    width: 100%;
+    border-top-right-radius: calc(1vw / 1);
+    border-bottom-right-radius: calc(1vw / 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+#homePage{
+    position: relative;
+    cursor: pointer;
+    z-index: 1000;
+    height: 0px;
+    width: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 0px solid white;
+}
+#homeIcon{
+    width: 0;
+    height: 0;
+}
+#homePage:hover{
+    border-color: #eeaaaa;
+    box-shadow: inset 0px 0px 5px darkred, 0px 0px 5px darkred;
+}
+
+#searchPage{
+    position: relative;
+    cursor: pointer;
+    z-index: 1;
+    height: 0px;
+    width: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 0px solid white;
+}
+#searchIcon{
+    width: 0;
+    height: 0;
+}
+#searchPage:hover{
+    border-color: lightgreen;
+    box-shadow: inset 0px 0px 5px darkgreen, 0px 0px 5px darkgreen;
+}
+
+#textHistoryPage{
+    position: relative;
+    cursor: pointer;
+    z-index: 1;
+    height: 0px;
+    width: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 0px solid white;
+}
+#textIcon{
+    width: 0;
+    height: 0;
+}
+#textHistoryPage:hover{
+    border-color:lightblue;
+    box-shadow: inset 0px 0px 5px darkblue, 0px 0px 5px darkblue;
+}
+
+#menuOpener{
+    position: relative;
+    width: 23px;
+    height: 48px;
+    top: 50%;
+    left: calc(1vw - 11px);
+    border: 1px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 10;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 15px;
+    writing-mode: vertical-lr;
+}
+
+#page{
+    position: absolute;
+    height: 100vh;
+    width: calc(99vw - 1px);
+    left: calc(1vw + 1px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.box{
+    width: calc(25% - 2px);
+    height: calc(25% - 2px);
+    border: 1px solid black;
+}
